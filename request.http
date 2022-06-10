@@ -1,0 +1,100 @@
+# LANGUAGES:
+
+###
+GET http://localhost:5000/api/v1/languages HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/languages/62a36a09fb703a0f2624e7a5 HTTP/1.1
+
+###
+POST http://localhost:5000/api/v1/languages HTTP/1.1
+Content-Type: application/json
+
+{
+    "language": "Python",
+    "edicion": "3ra",
+    "autor":"Guido Van Rossum"
+}
+
+###
+PUT http://localhost:5000/api/v1/languages/62a36a09fb703a0f2624e7a5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "edicion": "2da"
+}
+
+###
+DELETE http://localhost:5000/api/v1/languages/62a369c5fb703a0f2624e7a0 HTTP/1.1
+
+
+# INFO CLIENTS:
+
+###
+GET http://localhost:5000/api/v1/info-clients HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/info-clients/62a36f11f24168796399827c HTTP/1.1
+
+###
+POST http://localhost:5000/api/v1/info-clients HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Pedro",
+  "lastName": "Lopez",
+  "loginCount": 3,
+  "isWriter": true,
+  "worksWith": ["Uni Caldas", "Uni nacional"],
+  "pets": [{
+    "name": "Gooda",
+    "type": "Cat"
+  },
+  {
+    "name": "Fili",
+    "type": "Cat"
+  }
+  ]
+}
+
+###
+PUT http://localhost:5000/api/v1/info-clients/62a36f11f24168796399827c HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Mario"
+}
+
+###
+DELETE http://localhost:5000/api/v1/info-clients/62a36f11f24168796399827c HTTP/1.1
+
+
+# LOCALIZACION CLIENTES:
+
+###
+GET http://localhost:5000/api/v1/loc-clients HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/loc-clients/62a371e4f2361ae1add044dc HTTP/1.1
+
+###
+POST http://localhost:5000/api/v1/loc-clients HTTP/1.1
+Content-Type: application/json
+
+{
+  "latitude": 123546,
+  "longitude": -484212,
+  "city": "Manizales",
+  "description": "El cable"
+}
+
+###
+PUT http://localhost:5000/api/v1/loc-clients/62a371e4f2361ae1add044dc HTTP/1.1
+Content-Type: application/json
+
+{
+    "description": "Fundadores"
+}
+
+###
+DELETE http://localhost:5000/api/v1/loc-clients/62a371e4f2361ae1add044dc HTTP/1.1
